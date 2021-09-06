@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'forgotpassword.dart';
-import 'signup.dart';
-import 'main.dart';
-import 'drawer.dart';
+import '../forgotpassword/forgotpassword.dart';
+import '../signup/signup.dart';
+import '../../main.dart';
+import '../../drawer/drawer.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);

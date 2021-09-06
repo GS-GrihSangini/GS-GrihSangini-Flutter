@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pakkagsapp/login.dart';
-import 'signup.dart';
-import 'forgotpassword.dart';
+import 'package:pakkagsapp/pages/login/login.dart';
+import 'pages/signup/signup.dart';
+import 'pages/forgotpassword/forgotpassword.dart';
 
 void main() {
   runApp(const MyApp());

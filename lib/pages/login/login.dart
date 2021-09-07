@@ -13,7 +13,7 @@ class Login extends StatelessWidget {
       appBar: AppBar(
         title: Text("Login Screen"),
       ),
-      endDrawer: MainDrawer(),
+      drawer: MainDrawer(),
       //*EDIT REQUIRED- Need to make more user friendy UI*/
       body: Center(
         child: Column(

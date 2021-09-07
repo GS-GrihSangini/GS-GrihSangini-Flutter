@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pakkagsapp/pages/signup/signup_hirer/signup_hirer.dart';
 import '../login/login.dart';
 import '../forgotpassword/forgotpassword.dart';
 import '../../main.dart';
+import '../signup/signup_hirer/signup_hirer.dart';
+import '../signup/signup_worker/signup_worker.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -12,42 +15,57 @@ class SignUp extends StatelessWidget {
       appBar: AppBar(
         title: Text("Registeration Screen"),
       ),
-    );
-  }
-}
-
-class MySignUpPage extends StatefulWidget {
-  const MySignUpPage({Key? key}) : super(key: key);
-
-  @override
-  _MySignUpPageState createState() => _MySignUpPageState();
-}
-
-class _MySignUpPageState extends State<MySignUpPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
       body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              Text(
-                "Choose your category",
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.orange,
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 300,
+            ),
+            Container(
+              height: 50.0,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignUpWorker()));
+                },
+                child: Material(
+                  borderRadius: BorderRadius.circular(20.0),
+                  shadowColor: Colors.cyan[50],
+                  color: Colors.cyan,
+                  elevation: 7.0,
+                  child: Center(
+                      child: Text('Register as WORKER',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold))),
                 ),
-              )
-            ],
-          ),
+              ),
+            ),
+            SizedBox(
+              height: 300,
+            ),
+            Container(
+              height: 50.0,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignUpHirer()));
+                },
+                child: Material(
+                  borderRadius: BorderRadius.circular(20.0),
+                  shadowColor: Colors.cyan[50],
+                  color: Colors.orange[700],
+                  elevation: 7.0,
+                  child: Center(
+                      child: Text('Hire a Worker',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold))),
+                ),
+              ),
+            ),
+          ],
         ),
-      ),
-    );
-    Container(
-      child: Image(
-        image: NetworkImage(
-            'https://media.istockphoto.com/photos/wearing-a-welder-mask-while-looking-at-the-camera-picture-id945923864?k=6&m=945923864&s=612x612&w=0&h=8M_BJC4Muc-dmZp8Hvvh6vWW8Hig6VlweK-ezoB_8S4='),
       ),
     );
   }

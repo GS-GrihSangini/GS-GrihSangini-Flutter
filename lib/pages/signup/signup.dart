@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:pakkagsapp/drawer/drawer.dart';
 import 'package:pakkagsapp/pages/signup/signup_hirer/signup_hirer.dart';
 import '../login/login.dart';
 import '../forgotpassword/forgotpassword.dart';
 import '../../main.dart';
 import '../signup/signup_hirer/signup_hirer.dart';
 import '../signup/signup_worker/signup_worker.dart';
+import '../../drawer/drawer.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -15,6 +17,7 @@ class SignUp extends StatelessWidget {
       appBar: AppBar(
         title: Text("Registeration Screen"),
       ),
+      drawer: MainDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

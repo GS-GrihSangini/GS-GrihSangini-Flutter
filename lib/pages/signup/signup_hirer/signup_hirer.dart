@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../drawer/drawer.dart';
 
 class SignUpHirer extends StatefulWidget {
   const SignUpHirer({Key? key}) : super(key: key);
@@ -14,6 +15,7 @@ class _SignUpHirerState extends State<SignUpHirer> {
       appBar: AppBar(
         title: Text("Hirer Registration Page"),
       ),
+      drawer: MainDrawer(),
     );
   }
 }

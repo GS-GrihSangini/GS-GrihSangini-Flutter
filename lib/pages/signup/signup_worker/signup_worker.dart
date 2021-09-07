@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../drawer/drawer.dart';
 
 class SignUpWorker extends StatefulWidget {
   const SignUpWorker({Key? key}) : super(key: key);
@@ -14,6 +15,7 @@ class _SignUpWorkerState extends State<SignUpWorker> {
       appBar: AppBar(
         title: Text('Worker Registration'),
       ),
+      drawer: MainDrawer(),
     );
   }
 }
